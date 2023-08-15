@@ -1,0 +1,23 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #EEF5FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  height: 500px;
+  width: 780px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 30px 5px rgba(0, 0, 0, 0.03);
+}
+
+/*# sourceMappingURL=main.css.map */
