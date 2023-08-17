@@ -26,6 +26,30 @@ body {
   height: 100%;
   width: 300px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 30px;
+}
+.card .steps .dot {
+  height: 35px;
+  width: 35px;
+  background: #ffffff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.card .steps .dot-details span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+}
+.card .steps .dot-details p {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 3px;
 }
 .card .step-form-details {
   padding: 10px 50px;
