@@ -1,14 +1,17 @@
 <template>
   <div class="card">
     <div class="steps-container">
-      <Steps v-for="step in steps" :key="step.stepNumber" :stepProp="step"/>
+      <Steps v-for="step in steps" :key="step.stepNumber" :stepProp="step" :cStep="currentStep"/>
     </div>
     <div class="step-form-details">
-      <h1>Personal Info + {{ someNumber }}</h1>
+      <h1>Personal Info</h1>
       <p>Please provide your name, email and phone number.</p>
 
-      <button @click="incStep">Next</button>
+      <h3>state = {{ currentStep }}</h3>
+
       <button @click="decStep">Prev</button>
+      <button @click="incStep">Next</button>
+      
     </div>
   </div>
 </template>
@@ -17,7 +20,7 @@
 import Steps from './Steps.vue'
 import { ref } from 'vue';
 
-const someNumber = ref(1)
+const currentStep = ref(1)
 
 const steps = ref([
   { 
@@ -38,11 +41,11 @@ const steps = ref([
 ])
 
 const incStep = () => {
-  someNumber.value++
+  currentStep.value++
 }
 
 const decStep = () => {
-  someNumber.value--
+  currentStep.value--
 }
 
 </script>

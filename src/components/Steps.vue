@@ -1,6 +1,6 @@
 <template>
   <div class="steps">
-    <div class="dot">{{ stepProp.stepNumber }}</div>
+    <div class="dot" :class="cStep === stepProp.stepNumber ? 'dot-active' : ''">{{ stepProp.stepNumber }}</div>
     <div class="dot-details">
       <span>{{ stepProp.stepTitle }}</span>
       <p>{{ stepProp.stepDetail }}</p>
@@ -10,6 +10,7 @@
 
 <script setup>
   const props = defineProps({
-    stepProp: Object
+    stepProp: Object,
+    cStep: String
   })
 </script>
