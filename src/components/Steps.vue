@@ -1,13 +1,15 @@
 <template>
   <div class="steps">
-    <div class="dot">1</div>
+    <div class="dot">{{ stepProp.stepNumber }}</div>
     <div class="dot-details">
-      <span>Step 1</span>
-      <p>Your Info</p>
+      <span>{{ stepProp.stepTitle }}</span>
+      <p>{{ stepProp.stepDetail }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
-
+  const props = defineProps({
+    stepProp: Object
+  })
 </script>

@@ -19,36 +19,35 @@ body
   padding: 10px
   display: flex
 
-  .steps 
+  .steps-container 
     background: url('../assets/bg-sidebar-desktop.svg')
     height: 100% 
     width: 300px
     border-radius: 10px
+    padding: 30px
+    background-repeat: no-repeat 
+    background-size: cover
+
+  .dot 
+    height: 35px
+    width: 35px
+    background: $cWhite
+    border-radius: 100%
     display: flex 
     align-items: center
-    gap: 15px
-    padding: 30px
+    justify-content: center
+    font-size: 14px
 
-    .dot 
-      height: 35px
-      width: 35px
-      background: $cWhite
-      border-radius: 100%
-      display: flex 
-      align-items: center
-      justify-content: center
-      font-size: 14px
+  .dot-details 
+    span 
+      color: rgba($cWhite, 0.5)
+      font-size: 16px 
 
-    .dot-details 
-      span 
-        color: rgba($cWhite, 0.5)
-        font-size: 16px 
-
-      p 
-        color: $cWhite 
-        font-weight: bold
-        font-size: 18px
-        margin-top: 3px
+    p 
+      color: $cWhite 
+      font-weight: bold
+      font-size: 18px
+      margin-top: 3px
 
 
   .step-form-details 
