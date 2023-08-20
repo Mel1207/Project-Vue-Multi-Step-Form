@@ -2,7 +2,10 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    stepNum: 1
+    currentStep: 1,
+    newUser: {
+      name: 'Mel'
+    }
   },
   getters: {
   },

@@ -1,23 +1,23 @@
 <template>
+  <h3>state = {{ $store.state.currentStep }}</h3>  
   <div class="card">
     <div class="steps-container">
-      <Steps v-for="step in steps" :key="step.stepNumber" :stepProp="step" :cStep="currentStep"/>
+      <Steps v-for="step in steps" :key="step.stepNumber" :stepProp="step"/>
     </div>
     <div class="step-form-details">
-      <h3>state = {{ currentStep }}</h3>
-      <PersonalInfo v-if="currentStep == 1"/>
-      <PlansInfo v-if="currentStep == 2"/>
-      <AddOnsInfo v-if="currentStep == 3"/>
+      <PersonalInfo v-if="$store.state.currentStep == 1"/>
+      <PlansInfo v-if="$store.state.currentStep == 2"/>
+      <AddOnsInfo v-if="$store.state.currentStep == 3"/>
       <FinishStep v-if="currentStep == 4 && !closeSummary"/>
       <Message v-if="messageIsConfirmed"/>
       
 
 
-      <div v-if="!closeSummary">
+      <!-- <div v-if="!closeSummary">
         <button v-if="currentStep >= 2" @click="decStep">Go Back</button>
         <button v-if="currentStep < 4 && currentStep != null" @click="incStep">Next</button>
         <button v-if="currentStep == 4" @click="openMessage">Confirm</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
