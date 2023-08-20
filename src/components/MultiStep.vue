@@ -8,14 +8,16 @@
       <PersonalInfo v-if="currentStep == 1"/>
       <PlansInfo v-if="currentStep == 2"/>
       <AddOnsInfo v-if="currentStep == 3"/>
-      <FinishStep v-if="currentStep == 4"/>
+      <FinishStep v-if="currentStep == 4 && !closeSummary"/>
       <Message v-if="messageIsConfirmed"/>
       
 
 
-      <button v-if="currentStep >= 2" @click="decStep">Prev</button>
-      <button v-if="currentStep < 4" @click="incStep">Next</button>
-      <button v-if="currentStep == 4" @click="openMessage">Confirm</button>
+      <div v-if="!closeSummary">
+        <button v-if="currentStep >= 2" @click="decStep">Go Back</button>
+        <button v-if="currentStep < 4 && currentStep != null" @click="incStep">Next</button>
+        <button v-if="currentStep == 4" @click="openMessage">Confirm</button>
+      </div>
     </div>
   </div>
 </template>
@@ -31,9 +33,14 @@ import { ref } from 'vue'
 
 const currentStep = ref(1)
 const messageIsConfirmed = ref(false)
+const closeSummary = ref(false)
 const openMessage = () => {
   messageIsConfirmed.value = true
-  currentStep.value = currentStep.value + 1
+  closeSummary.value = true
+
+  if(currentStep.value == 4) {
+    return
+  }
 }
 
 const steps = ref([
