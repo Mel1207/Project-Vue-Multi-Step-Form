@@ -4,15 +4,18 @@
       <Steps v-for="step in steps" :key="step.stepNumber" :stepProp="step" :cStep="currentStep"/>
     </div>
     <div class="step-form-details">
+      <h3>state = {{ currentStep }}</h3>
       <PersonalInfo v-if="currentStep == 1"/>
       <PlansInfo v-if="currentStep == 2"/>
       <AddOnsInfo v-if="currentStep == 3"/>
       <FinishStep v-if="currentStep == 4"/>
+      <Message v-if="messageIsConfirmed"/>
+      
 
 
-      <h3>state = {{ currentStep }}</h3>
-      <button @click="decStep">Prev</button>
-      <button @click="incStep">Next</button>
+      <button v-if="currentStep >= 2" @click="decStep">Prev</button>
+      <button v-if="currentStep < 4" @click="incStep">Next</button>
+      <button v-if="currentStep == 4" @click="openMessage">Confirm</button>
     </div>
   </div>
 </template>
@@ -23,9 +26,15 @@ import PersonalInfo from './PersonalInfo.vue'
 import PlansInfo from './PlansInfo.vue'
 import AddOnsInfo from './AddOnsInfo.vue'
 import FinishStep from './FinishStep.vue'
+import Message from './Message.vue'
 import { ref } from 'vue'
 
 const currentStep = ref(1)
+const messageIsConfirmed = ref(false)
+const openMessage = () => {
+  messageIsConfirmed.value = true
+  currentStep.value = currentStep.value + 1
+}
 
 const steps = ref([
   { 
