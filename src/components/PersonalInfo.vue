@@ -19,20 +19,48 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed } from 'vue';
 import { useStore } from 'vuex';
 
   const store = useStore()
-  const name = ref('')
-  const email = ref('')
-  const phone = ref('')
+  const name = computed({
+    get() {
+      return store.state.newUser.name
+    },
+    set(newName) {
+      return store.commit('setName', newName)
+    }
+  })
+
+  const email = computed({
+    get() {
+      return store.state.newUser.email
+    },
+    set(newEmail) {
+      return store.commit('setEmail', newEmail)
+    }
+  })
+
+  const phone = computed({
+    get() {
+      return store.state.newUser.phone
+    },
+    set(newPhone) {
+      return store.commit('setPhone', newPhone)
+    }
+  })
+
+  
+
 
   const validateForm = () => {
     if(!name.value || !email.value || !phone.value) {
-      return alert('please fill all fields')
+      return alert('no value')
     }
+    
 
     store.state.currentStep++
+    // console.log(store.state.newUser)
 
   }
 
