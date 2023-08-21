@@ -68,6 +68,12 @@ body {
 .card .step-form-details {
   padding: 10px 50px;
 }
+.card .step-form-details .step-description h1 {
+  margin-bottom: 10px;
+}
+.card .step-form-details .step-description p {
+  margin-bottom: 30px;
+}
 
 .form-group {
   display: flex;
@@ -86,9 +92,18 @@ body {
 .form-group input:focus {
   border: 1px solid #02295a;
 }
-.form-group label {
+.form-group div {
+  display: flex;
+  justify-content: space-between;
+}
+.form-group div label {
   font-weight: 500;
   margin-bottom: 5px;
+}
+.form-group div span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ed3548;
 }
 
 button {

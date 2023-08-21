@@ -4,22 +4,32 @@ export default createStore({
   state: {
     currentStep: 1,
     newUser: {
-      name: '',
-      email: '',
-      phone: ''
+      formName: {
+        name: '',
+        isComplete: false
+      },
+      formEmail: {
+        email: '',
+        isComplete: false
+      },
+      formPhone: {
+        phone: '',
+        isComplete: false
+      }
+      // phone: ''
     }
   },
   getters: {
   },
   mutations: {
     setName(state, newName) {
-      state.newUser.name = newName
+      state.newUser.formName.name = newName
     },
     setEmail(state, newEmail) {
-      state.newUser.email = newEmail
+      state.newUser.formEmail.email = newEmail
     },
     setPhone(state, newPhone) {
-      state.newUser.phone = newPhone
+      state.newUser.formPhone.phone = newPhone
     },
   },
   actions: {
