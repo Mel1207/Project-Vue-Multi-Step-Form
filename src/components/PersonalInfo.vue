@@ -9,21 +9,21 @@
       <label for="name">Name</label>
       <span v-if="$store.state.newUser.formName.isComplete">This field is required</span>
     </div>
-    <input type="text" id="name" v-model="name" @keydown="isTyping">
+    <input type="text" id="name" v-model="name" @keydown="isTyping" :class="$store.state.newUser.formName.isComplete ? 'required' : ''">
   </div>
   <div class="form-group">
     <div>
       <label for="email">Email</label>
       <span v-if="$store.state.newUser.formEmail.isComplete">This field is required</span>
     </div>
-    <input type="email" id="email" v-model="email" @keydown="isTyping">
+    <input type="email" id="email" v-model="email" @keydown="isTyping" :class="$store.state.newUser.formEmail.isComplete ? 'required' : ''">
   </div>
   <div class="form-group">
     <div>
       <label for="phone">Phone</label>
       <span v-if="$store.state.newUser.formPhone.isComplete">This field is required</span>
     </div>
-    <input type="number" id="phone" v-model="phone" @keydown="isTyping">
+    <input type="number" id="phone" v-model="phone" @keydown="isTyping" :class="$store.state.newUser.formPhone.isComplete ? 'required' : ''">
   </div>
   <button @click="validateForm">Next</button>
 </template>

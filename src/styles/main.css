@@ -80,6 +80,9 @@ body {
   flex-direction: column;
   margin-bottom: 20px;
 }
+.form-group .required {
+  border: 1px solid #ed3548;
+}
 .form-group input {
   width: 100%;
   height: 45px;
