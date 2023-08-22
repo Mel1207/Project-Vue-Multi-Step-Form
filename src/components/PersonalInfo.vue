@@ -9,7 +9,7 @@
       <label for="name">Name</label>
       <span v-if="$store.state.newUser.formName.isComplete">This field is required</span>
     </div>
-    <input type="text" id="name" v-model="name">
+    <input type="text" id="name" v-model="name" @keydown="testRun">
   </div>
   <div class="form-group">
     <div>
@@ -25,7 +25,7 @@
     </div>
     <input type="number" id="phone" v-model="phone">
   </div>
-
+  <h1>{{ email }}</h1>
   <button @click="validateForm">Next</button>
 </template>
 
@@ -62,11 +62,23 @@ import { useStore } from 'vuex';
     }
   })
 
+  const testRun = () => {
+    store.state.newUser.formName.isComplete = false
+  }
+
   const validateForm = () => {
-    if(!name.value || !email.value || !phone.value) {
-      store.state.newUser.formName.isComplete = true 
+    // if(!name.value || !email.value || !phone.value) {
+    //   return
+    // }
+
+
+    if(!name.value) {
+      store.state.newUser.formName.isComplete = true
+      return
+    }
+
+    if(!email.value) {
       store.state.newUser.formEmail.isComplete = true
-      store.state.newUser.formPhone.isComplete = true
       return
     }
 
