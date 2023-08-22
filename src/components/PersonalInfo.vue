@@ -9,23 +9,22 @@
       <label for="name">Name</label>
       <span v-if="$store.state.newUser.formName.isComplete">This field is required</span>
     </div>
-    <input type="text" id="name" v-model="name" @keydown="testRun">
+    <input type="text" id="name" v-model="name" @keydown="isTyping">
   </div>
   <div class="form-group">
     <div>
       <label for="email">Email</label>
       <span v-if="$store.state.newUser.formEmail.isComplete">This field is required</span>
     </div>
-    <input type="email" id="email" v-model="email">
+    <input type="email" id="email" v-model="email" @keydown="isTyping">
   </div>
   <div class="form-group">
     <div>
       <label for="phone">Phone</label>
       <span v-if="$store.state.newUser.formPhone.isComplete">This field is required</span>
     </div>
-    <input type="number" id="phone" v-model="phone">
+    <input type="number" id="phone" v-model="phone" @keydown="isTyping">
   </div>
-  <h1>{{ email }}</h1>
   <button @click="validateForm">Next</button>
 </template>
 
@@ -62,16 +61,13 @@ import { useStore } from 'vuex';
     }
   })
 
-  const testRun = () => {
+  const isTyping = () => {
     store.state.newUser.formName.isComplete = false
+    store.state.newUser.formEmail.isComplete = false
+    store.state.newUser.formPhone.isComplete = false
   }
 
   const validateForm = () => {
-    // if(!name.value || !email.value || !phone.value) {
-    //   return
-    // }
-
-
     if(!name.value) {
       store.state.newUser.formName.isComplete = true
       return
@@ -79,6 +75,11 @@ import { useStore } from 'vuex';
 
     if(!email.value) {
       store.state.newUser.formEmail.isComplete = true
+      return
+    }
+
+    if(!phone.value) {
+      store.state.newUser.formPhone.isComplete = true
       return
     }
 
