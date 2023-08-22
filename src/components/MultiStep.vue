@@ -10,14 +10,6 @@
       <AddOnsInfo v-if="$store.state.currentStep == 3"/>
       <FinishStep v-if="currentStep == 4 && !closeSummary"/>
       <Message v-if="messageIsConfirmed"/>
-      
-
-
-      <!-- <div v-if="!closeSummary">
-        <button v-if="currentStep >= 2" @click="decStep">Go Back</button>
-        <button v-if="currentStep < 4 && currentStep != null" @click="incStep">Next</button>
-        <button v-if="currentStep == 4" @click="openMessage">Confirm</button>
-      </div> -->
     </div>
   </div>
 </template>
