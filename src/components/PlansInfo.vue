@@ -5,18 +5,18 @@
   
   <form @submit="validateForm">
     <div class="form-group-select">
-      <div class="form-select">
-        <label for="arcade">test</label>
+      <label for="arcade" class="form-select">
+        <div>test</div>
         <input type="radio" id="arcade" name="promo">
-      </div>
-      <div class="form-select">
-        <label for="advanced">advanced</label>
+      </label>
+      <label for="advanced" class="form-select">
+        <div>advanced</div>
         <input type="radio" id="advanced" name="promo">
-      </div>
-      <div class="form-select">
-        <label for="pro">pro</label>
+      </label>
+      <label for="pro" class="form-select">
+        <div>pro</div>
         <input type="radio" id="pro" name="promo">
-      </div>
+      </label>
     </div>
 
     <div class="form-group checkbox">
