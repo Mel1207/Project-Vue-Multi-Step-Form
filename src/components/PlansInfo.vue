@@ -4,13 +4,19 @@
   <br>
   
   <form @submit="validateForm">
-    <div class="form-group">
-      <label for="arcade">test</label>
-      <input type="radio" id="arcade" name="promo">
-      <label for="advanced">advanced</label>
-      <input type="radio" id="advanced" name="promo">
-      <label for="pro">pro</label>
-      <input type="radio" id="pro" name="promo">
+    <div class="form-group-select">
+      <div class="form-select">
+        <label for="arcade">test</label>
+        <input type="radio" id="arcade" name="promo">
+      </div>
+      <div class="form-select">
+        <label for="advanced">advanced</label>
+        <input type="radio" id="advanced" name="promo">
+      </div>
+      <div class="form-select">
+        <label for="pro">pro</label>
+        <input type="radio" id="pro" name="promo">
+      </div>
     </div>
 
     <div class="form-group checkbox">
