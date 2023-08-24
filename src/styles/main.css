@@ -123,14 +123,31 @@ button {
 .form-group-select {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
-
-.form-select {
+.form-group-select .form-group-radio {
   position: relative;
-  height: 150px;
+}
+.form-group-select .form-group-radio .radio {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.form-group-select .form-group-radio .radio-ui {
+  height: 140px;
   width: 120px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  border: 1px solid #d6d9e6;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+}
+.form-group-select .form-group-radio .radio:checked + .radio-ui {
+  border: 1px solid #473dff;
+  background: #fafbff;
 }
 
 /*# sourceMappingURL=main.css.map */

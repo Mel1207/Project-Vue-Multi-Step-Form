@@ -3,20 +3,32 @@
   <p>You have the option of monthly or yearly billing</p>
   <br>
   
-  <form @submit="validateForm">
+  <form @submit.prevent="validateForm">
     <div class="form-group-select">
-      <label for="arcade" class="form-select">
-        <div>test</div>
-        <input type="radio" id="arcade" name="promo">
-      </label>
-      <label for="advanced" class="form-select">
-        <div>advanced</div>
-        <input type="radio" id="advanced" name="promo">
-      </label>
-      <label for="pro" class="form-select">
-        <div>pro</div>
-        <input type="radio" id="pro" name="promo">
-      </label>
+      <div class="form-group-radio">
+        <input type="radio" id="arcade" name="promo" class="radio">
+        <label for="arcade" class="radio-ui">
+          <img src="../assets/icon-arcade.svg" alt="arcade">
+          <p>arcade</p>
+          <span>$9/mo</span>
+        </label>
+      </div>
+      <div class="form-group-radio">
+        <input type="radio" id="advanced" name="promo" class="radio">
+        <label for="advanced" class="radio-ui">
+          <img src="../assets/icon-advanced.svg" alt="advanced">
+          <p>advanced</p>
+          <span>$12/mo</span>
+        </label>
+      </div>
+      <div class="form-group-radio">
+        <input type="radio" id="pro" name="promo" class="radio">
+        <label for="pro" class="radio-ui">
+          <img src="../assets/icon-pro.svg" alt="pro">
+          <p>pro</p>
+          <span>$15/mo</span>
+        </label>
+      </div>
     </div>
 
     <div class="form-group checkbox">

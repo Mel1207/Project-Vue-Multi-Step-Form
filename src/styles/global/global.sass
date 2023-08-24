@@ -122,11 +122,37 @@ button
 .form-group-select 
   display: flex 
   justify-content: space-between
-.form-select 
-  position: relative
-  height: 150px
-  width: 120px
-  border: 1px solid #000 
-  border-radius: 5px
+  margin-bottom: 20px
+
+  .form-group-radio 
+    position: relative
+
+    .radio 
+      position: absolute
+      opacity: 0
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 2
+
+    .radio-ui 
+      height: 140px
+      width: 120px
+      border: 1px solid $lightGray
+      display: block
+      padding: 10px
+      border-radius: 8px
+    
+
+    .radio:checked + .radio-ui
+      border: 1px solid $purplishBlue
+      background: $alabaster
+
+ 
+
+
+
+  
 
   
