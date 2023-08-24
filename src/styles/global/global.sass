@@ -149,6 +149,41 @@ button
       border: 1px solid $purplishBlue
       background: $alabaster
 
+.form-group-checkbox 
+
+
+  .checkbox 
+    position: relative
+    height: 20px
+    width: 35px
+    background: $marineBlue
+    display: block
+    border-radius: 20px
+
+  .checkbox::before
+    content: ""
+    position: absolute 
+    left: 3px
+    top: 50%
+    right: 2px
+    transform: translateY(-50%)
+    height: 12px
+    width: 12px
+    border-radius: 100% 
+    background: white
+    transition: 0.2s ease
+
+  .check 
+    opacity: 0
+    height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+  .check:checked + .checkbox::before
+    transform: translate(17px, -50%)
+
  
 
 

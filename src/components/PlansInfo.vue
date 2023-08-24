@@ -31,9 +31,10 @@
       </div>
     </div>
 
-    <div class="form-group checkbox">
-      <input type="checkbox">
-    </div>
+    <label class="form-group-checkbox">
+      <input type="checkbox" class="check">
+      <span class="checkbox"></span>
+    </label>
   
     <button>Next</button>
     <button @click.self="goBack" type="button">Go Back</button>

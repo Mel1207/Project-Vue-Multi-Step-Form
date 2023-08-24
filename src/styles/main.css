@@ -150,4 +150,37 @@ button {
   background: #fafbff;
 }
 
+.form-group-checkbox .checkbox {
+  position: relative;
+  height: 20px;
+  width: 35px;
+  background: #02295a;
+  display: block;
+  border-radius: 20px;
+}
+.form-group-checkbox .checkbox::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  right: 2px;
+  transform: translateY(-50%);
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background: white;
+  transition: 0.2s ease;
+}
+.form-group-checkbox .check {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.form-group-checkbox .check:checked + .checkbox::before {
+  transform: translate(17px, -50%);
+}
+
 /*# sourceMappingURL=main.css.map */
