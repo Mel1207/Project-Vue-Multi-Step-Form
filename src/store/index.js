@@ -15,7 +15,8 @@ export default createStore({
       formPhone: {
         phone: '',
         isComplete: false
-      }
+      },
+      formPlan: 'pro'
       // phone: ''
     }
   },
@@ -31,6 +32,9 @@ export default createStore({
     setPhone(state, newPhone) {
       state.newUser.formPhone.phone = newPhone
     },
+    setPlan(state, newPlan) {
+      state.newUser.formPlan = newPlan
+    }
   },
   actions: {
   },
