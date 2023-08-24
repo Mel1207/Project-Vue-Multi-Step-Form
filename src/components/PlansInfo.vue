@@ -31,10 +31,14 @@
       </div>
     </div>
 
-    <label class="form-group-checkbox">
-      <input type="checkbox" class="check">
-      <span class="checkbox"></span>
-    </label>
+    <div class="bill-plan">
+      <p>Montly</p>
+      <label class="form-group-checkbox">
+        <input type="checkbox" class="check">
+        <span class="checkbox"></span>
+      </label>
+      <p>Annual</p>
+    </div>
 
     <h1>{{ formPlan }}</h1>
   

@@ -183,4 +183,15 @@ button {
   transform: translate(17px, -50%);
 }
 
+.bill-plan {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: red;
+  padding: 10px 0;
+  background: #fafbff;
+  border: 1px solid #d6d9e6;
+  border-radius: 4px;
+}
+
 /*# sourceMappingURL=main.css.map */
