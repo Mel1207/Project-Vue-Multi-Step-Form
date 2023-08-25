@@ -16,7 +16,7 @@ export default createStore({
         phone: '',
         isComplete: false
       },
-      formPlan: 'pro'
+      formPlan: 'arcade'
       // phone: ''
     }
   },

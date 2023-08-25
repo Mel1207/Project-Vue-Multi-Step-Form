@@ -150,6 +150,11 @@ button {
   background: #fafbff;
 }
 
+.form-group-checkbox {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
 .form-group-checkbox .checkbox {
   position: relative;
   height: 20px;
