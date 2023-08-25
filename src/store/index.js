@@ -16,8 +16,8 @@ export default createStore({
         phone: '',
         isComplete: false
       },
-      formPlan: 'arcade'
-      // phone: ''
+      formPlan: 'arcade',
+      formBill: false
     }
   },
   getters: {
@@ -34,6 +34,9 @@ export default createStore({
     },
     setPlan(state, newPlan) {
       state.newUser.formPlan = newPlan
+    },
+    setFormBill(state, newFormBill) {
+      state.newUser.formBill = newFormBill
     }
   },
   actions: {

@@ -35,15 +35,13 @@
       
       <label class="form-group-checkbox">
         <p>Montly</p>
-        <input type="checkbox" class="check">
+        <input type="checkbox" class="check" v-model="formBill">
         <span class="checkbox"></span>
         <p>Annual</p>
       </label>
       
     </div>
 
-    <h1>{{ formPlan }}</h1>
-  
     <button>Next</button>
     <button @click.self="goBack" type="button">Go Back</button>
   </form>
@@ -61,6 +59,15 @@ import store from '@/store';
     },
     set(newPlan) {
       return store.commit('setPlan', newPlan)
+    }
+  })
+
+  const formBill = computed({
+    get() {
+      return store.state.newUser.formBill
+    },
+    set(newFormBill) {
+      return store.commit('setFormBill', newFormBill)
     }
   })
 
