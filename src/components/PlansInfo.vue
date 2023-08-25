@@ -1,7 +1,8 @@
 <template>
-  <h1>Select your plan</h1>
-  <p>You have the option of monthly or yearly billing</p>
-  <br>
+  <div class="step-description">
+    <h1>Select your plan</h1>
+    <p>You have the option of monthly or yearly billing</p>
+  </div>
   
   <form @submit.prevent="validateForm">
     <div class="form-group-select">
