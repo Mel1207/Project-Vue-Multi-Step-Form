@@ -17,7 +17,8 @@ export default createStore({
         isComplete: false
       },
       formPlan: 'arcade',
-      formBill: false
+      formBill: false,
+      addOns: []
     }
   },
   getters: {
@@ -37,6 +38,9 @@ export default createStore({
     },
     setFormBill(state, newFormBill) {
       state.newUser.formBill = newFormBill
+    },
+    setAddOns(state, setAdds) {
+      state.newUser.addOns = setAdds
     }
   },
   actions: {
