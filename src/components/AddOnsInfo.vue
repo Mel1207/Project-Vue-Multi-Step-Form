@@ -5,17 +5,23 @@
   </div>
   <form @submit.prevent="validateStep">
     <div class="form-group-check">
-      <input type="checkbox" id="onlineService" value="ao1" v-model="addOns">
-      <label for="onlineService">Online Service</label>
+      <label class="form-group-check-container" for="onlineService">
+        <input type="checkbox" id="onlineService" value="ao1" v-model="addOns">
+        <span class="checkbox-icon"></span>
+        Online Service
+      </label>
+      
+
+     
     </div>
-    <div class="form-group-check">
+    <!-- <div class="form-group-check">
       <input type="checkbox" id="largeStorage" value="ao2" v-model="addOns">
       <label for="largeStorage">Large Storage</label>
     </div>
     <div class="form-group-check">
       <input type="checkbox" id="customizableProfile" value="ao3" v-model="addOns">
       <label for="customizableProfile">Customizable Profile</label>
-    </div>
+    </div> -->
 
     <button @click="$store.state.currentStep--">Go back</button>
     <button>Next</button>

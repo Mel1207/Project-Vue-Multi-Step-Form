@@ -197,6 +197,44 @@ button
   border-radius: 4px
 
 
+.form-group-check 
+  display: block
+  position: relative
+  cursor: pointer
+  // background: red 
+  margin-bottom: 20px
+  padding: 10px
   
+  .form-group-check-container
+    input 
+      position: absolute
+      top: 0
+      left: 0 
+      opacity: 0
 
+    .checkbox-icon 
+      height: 19px
+      width: 19px
+      position: absolute
+      background: $cWhite
+      border-radius: 5px 
+      border: 1px solid #00000027
+      transition: all 0.3s
+
+      &::after
+        left: 6px
+        top: 2px 
+        width: 5px 
+        height: 8px
+        border: solid red
+        border-width: 0 3px 3px 0
+        -webkit-transform: rotate(45deg)
+        -ms-transform: rotate(45deg)
+        transform: rotate(-45deg)
+        transition: all 0.1s
   
+  .form-group-check-container:hover input ~ .checkbox-icon
+    background: #f1f1f1
+
+  .form-group-checkbox input:checked ~ .checkbox-icon 
+    background: red
