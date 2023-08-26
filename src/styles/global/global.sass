@@ -74,6 +74,8 @@ body
 
       p 
         margin-bottom: 30px
+        color: $coolGray 
+        font-size: $fontBody
 
 .form-group 
   display: flex 
@@ -122,15 +124,22 @@ body
   align-items: center
 
 .btn-primary
-  padding: 10px 20px
+  padding: 12px 20px
   outline: none
   border: none
   // margin: 10px 15px 10px 0
-  border-radius: 3px
+  border-radius: 7px
   background: $marineBlue
   cursor: pointer
   color: white
-  margin-left: auto
+  margin-left: auto 
+  font-family: $font-ubuntu 
+  font-weight: 500 
+  font-size: 15px
+  transition: all 0.3s ease
+
+  &:hover
+    background: rgba($marineBlue, 0.9)
 
 .btn-secondary 
   padding: 10px 0
@@ -141,6 +150,11 @@ body
   background: none 
   border: none
   cursor: pointer
+  font-size: 15px 
+  transition: all 0.3s ease
+
+  &:hover
+    color: $marineBlue
 
 .form-group-select 
   display: flex 

@@ -74,6 +74,8 @@ body {
 }
 .card .step-form-details .step-description p {
   margin-bottom: 30px;
+  color: #9699ab;
+  font-size: 16px;
 }
 
 .form-group {
@@ -122,14 +124,21 @@ body {
 }
 
 .btn-primary {
-  padding: 10px 20px;
+  padding: 12px 20px;
   outline: none;
   border: none;
-  border-radius: 3px;
+  border-radius: 7px;
   background: #02295a;
   cursor: pointer;
   color: white;
   margin-left: auto;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background: rgba(2, 41, 90, 0.9);
 }
 
 .btn-secondary {
@@ -141,6 +150,11 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  color: #02295a;
 }
 
 .form-group-select {
