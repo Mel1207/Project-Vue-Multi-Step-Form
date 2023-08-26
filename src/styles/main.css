@@ -22,7 +22,7 @@ body {
   box-shadow: 0px 4px 30px 5px rgba(0, 0, 0, 0.03);
   padding: 10px;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 270px 1fr;
 }
 .card .steps {
   display: flex;

@@ -11,5 +11,5 @@
 <script setup>
   const props = defineProps({
     stepProp: Object
-  })
+  }) 
 </script>

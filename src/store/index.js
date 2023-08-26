@@ -18,8 +18,9 @@ export default createStore({
       },
       formPlan: 'arcade',
       formBill: false,
-      addOns: []
-    }
+      addOns: ['ao1', 'ao2']
+    },
+    isConfirm: false
   },
   getters: {
   },

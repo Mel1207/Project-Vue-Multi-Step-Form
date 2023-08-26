@@ -8,8 +8,8 @@
       <PersonalInfo v-if="$store.state.currentStep == 1"/>
       <PlansInfo v-if="$store.state.currentStep == 2"/>
       <AddOnsInfo v-if="$store.state.currentStep == 3"/>
-      <FinishStep v-if="currentStep == 4 && !closeSummary"/>
-      <Message v-if="messageIsConfirmed"/>
+      <FinishStep v-if="$store.state.currentStep == 4 && $store.state.currentStep < 5"/>
+      <Message v-if="$store.state.isConfirm"/>
     </div>
   </div>
 </template>
@@ -21,21 +21,9 @@ import PlansInfo from './PlansInfo.vue'
 import AddOnsInfo from './AddOnsInfo.vue'
 import FinishStep from './FinishStep.vue'
 import Message from './Message.vue'
-import { ref } from 'vue'
+import store from '@/store'
 
-const currentStep = ref(1)
-const messageIsConfirmed = ref(false)
-const closeSummary = ref(false)
-const openMessage = () => {
-  messageIsConfirmed.value = true
-  closeSummary.value = true
-
-  if(currentStep.value == 4) {
-    return
-  }
-}
-
-const steps = ref([
+const steps = [
   { 
     stepNumber: 1, 
     stepTitle: 'Step 1',
@@ -56,14 +44,6 @@ const steps = ref([
     stepTitle: 'Step 4',
     stepDetail: 'Summary'
   }
-])
-
-const incStep = () => {
-  currentStep.value++
-}
-
-const decStep = () => {
-  currentStep.value--
-}
+]
 
 </script>
