@@ -8,7 +8,7 @@
       <PersonalInfo v-if="$store.state.currentStep == 1"/>
       <PlansInfo v-if="$store.state.currentStep == 2"/>
       <AddOnsInfo v-if="$store.state.currentStep == 3"/>
-      <FinishStep v-if="$store.state.currentStep == 4 && $store.state.currentStep < 5"/>
+      <FinishStep v-if="$store.state.isFinished"/>
       <Message v-if="$store.state.isConfirm"/>
     </div>
   </div>
@@ -21,7 +21,6 @@ import PlansInfo from './PlansInfo.vue'
 import AddOnsInfo from './AddOnsInfo.vue'
 import FinishStep from './FinishStep.vue'
 import Message from './Message.vue'
-import store from '@/store'
 
 const steps = [
   { 

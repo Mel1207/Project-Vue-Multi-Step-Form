@@ -11,8 +11,8 @@
   import store from '@/store';
 
   const handleMessage = () => {
-    store.state.currentStep++
     store.state.isConfirm = true
+    store.state.isFinished = false
   }
 
 </script>

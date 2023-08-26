@@ -64,8 +64,8 @@
   })
 
   const validateStep = () => {
-    console.log('validated')
     store.state.currentStep++
+    store.state.isFinished = true
   }
 
 </script>

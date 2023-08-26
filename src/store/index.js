@@ -20,6 +20,7 @@ export default createStore({
       formBill: false,
       addOns: ['ao1', 'ao2']
     },
+    isFinished: false,
     isConfirm: false
   },
   getters: {
