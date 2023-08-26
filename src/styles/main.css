@@ -205,6 +205,22 @@ button {
   cursor: pointer;
   margin-bottom: 20px;
   padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: #fafbff;
+  border: 1px solid #bfe2fd;
+}
+.form-group-check .form-group-check-container {
+  cursor: pointer;
+}
+.form-group-check .form-group-check-container .adds-details {
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-group-check .form-group-check-container .adds-details p {
+  font-weight: bold;
 }
 .form-group-check .form-group-check-container input {
   position: absolute;
@@ -220,13 +236,15 @@ button {
   border-radius: 5px;
   border: 1px solid #00000027;
   transition: all 0.3s;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .form-group-check .form-group-check-container .checkbox-icon::after {
   left: 6px;
   top: 2px;
   width: 5px;
   height: 8px;
-  border: solid red;
+  border: solid #ffffff;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -237,7 +255,7 @@ button {
   background: #f1f1f1;
 }
 .form-group-check .form-group-check-container input:checked ~ .checkbox-icon {
-  background: green;
+  background: #473dff;
 }
 .form-group-check .checkbox-icon::after {
   content: "";
@@ -250,6 +268,11 @@ button {
 }
 .form-group-check .form-group-check-container input:checked ~ .checkbox-icon {
   border: none;
+}
+
+.form-group-check:has(input:checked) {
+  background: #fafbff;
+  border: 1px solid #02295a;
 }
 
 /*# sourceMappingURL=main.css.map */

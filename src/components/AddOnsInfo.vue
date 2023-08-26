@@ -4,36 +4,55 @@
     <p>Add-ons help enhance your gaming experience.</p>
   </div>
   <form @submit.prevent="validateStep">
-    <div class="form-group-check">
-      <label class="form-group-check-container" for="onlineService">
-        <input type="checkbox" id="onlineService" value="ao1" v-model="addOns">
+    <div v-for="item in addOnsList" :key="item.id" class="form-group-check">
+      <label class="form-group-check-container" :for="item.addCode">
+        <input type="checkbox" :id="item.addCode" :value="item.addValue" v-model="addOns">
         <span class="checkbox-icon"></span>
-        Online Service
+        <div class="adds-details">
+          <div>
+            <p>{{ item.addName }}</p>
+            <span>{{ item.description }}</span>
+          </div>
+          <p>{{ item.price }}</p>
+        </div>
       </label>
-      
-
-     
     </div>
-    <!-- <div class="form-group-check">
-      <input type="checkbox" id="largeStorage" value="ao2" v-model="addOns">
-      <label for="largeStorage">Large Storage</label>
-    </div>
-    <div class="form-group-check">
-      <input type="checkbox" id="customizableProfile" value="ao3" v-model="addOns">
-      <label for="customizableProfile">Customizable Profile</label>
-    </div> -->
 
     <button @click="$store.state.currentStep--">Go back</button>
     <button>Next</button>
   </form>
-
-  <h3>{{ addOns }}</h3>
-  
 </template>
 
 <script setup>
   import store from '@/store';
-import { computed } from 'vue';
+  import { computed } from 'vue';
+
+  const addOnsList = [
+    { 
+      id: 1,
+      addName: 'Online Service',
+      addValue: 'ao1',
+      addCode: 'onlineService',
+      description: 'Access to multiplayer games',
+      price: '+$1/mo'
+    },
+    { 
+      id: 2,
+      addName: 'Larger Storage',
+      addValue: 'ao2',
+      addCode: 'largerStorage',
+      description: 'Access to multiplayer games',
+      price: '+$1/mo'
+    },
+    { 
+      id: 3,
+      addName: 'Customizable Profile',
+      addValue: 'ao3',
+      addCode: 'customizableProfile',
+      description: 'Access to multiplayer games',
+      price: '+$1/mo'
+    }
+  ]
 
   const addOns = computed({
     get() {
