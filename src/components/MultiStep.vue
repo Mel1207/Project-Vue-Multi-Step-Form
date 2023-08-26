@@ -1,5 +1,5 @@
 <template>
-  <h3>state = {{ $store.state.currentStep }}</h3>  
+  <!-- <h3>state = {{ $store.state.currentStep }}</h3>   -->
   <div class="card">
     <div class="steps-container">
       <Steps v-for="step in steps" :key="step.stepNumber" :stepProp="step"/>
