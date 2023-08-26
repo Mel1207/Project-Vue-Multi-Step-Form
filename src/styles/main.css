@@ -1,4 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap");
+.form-buttons {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  padding: 0 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  background: #02295a;
+  cursor: pointer;
+  color: white;
+  margin-left: auto;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background: rgba(2, 41, 90, 0.9);
+}
+
+.btn-secondary {
+  padding: 10px 0;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  color: #9699ab;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  color: #02295a;
+}
+
 *, html {
   margin: 0;
   padding: 0;
@@ -110,51 +155,6 @@ body {
   font-size: 14px;
   font-weight: bold;
   color: #ed3548;
-}
-
-.form-buttons {
-  position: absolute;
-  left: 0;
-  bottom: 15px;
-  padding: 0 50px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btn-primary {
-  padding: 12px 20px;
-  outline: none;
-  border: none;
-  border-radius: 7px;
-  background: #02295a;
-  cursor: pointer;
-  color: white;
-  margin-left: auto;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-.btn-primary:hover {
-  background: rgba(2, 41, 90, 0.9);
-}
-
-.btn-secondary {
-  padding: 10px 0;
-  font-weight: bold;
-  font-family: "Ubuntu", sans-serif;
-  color: #9699ab;
-  outline: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-.btn-secondary:hover {
-  color: #02295a;
 }
 
 .form-group-select {
@@ -334,6 +334,12 @@ body {
   line-height: 25px;
   color: #9699ab;
   font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: red;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
