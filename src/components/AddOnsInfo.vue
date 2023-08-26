@@ -18,8 +18,11 @@
       </label>
     </div>
 
-    <button @click="$store.state.currentStep--">Go back</button>
-    <button>Next</button>
+    <div class="form-buttons">
+      <button @click="$store.state.currentStep--" class="btn-secondary">Go back</button>
+      <button class="btn-primary">Next Step</button>
+    </div>
+    
   </form>
 </template>
 

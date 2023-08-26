@@ -43,8 +43,10 @@
       
     </div>
 
-    <button>Next</button>
-    <button @click.self="goBack" type="button">Go Back</button>
+    <div class="form-buttons"> 
+      <button @click.self="goBack" type="button" class="btn-secondary">Go Back</button>
+      <button class="btn-primary">Next Step</button>
+    </div>
   </form>
   
   

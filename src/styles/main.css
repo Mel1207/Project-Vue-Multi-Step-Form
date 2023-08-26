@@ -67,6 +67,7 @@ body {
 }
 .card .step-form-details {
   padding: 10px 50px;
+  position: relative;
 }
 .card .step-form-details .step-description h1 {
   margin-bottom: 10px;
@@ -109,15 +110,37 @@ body {
   color: #ed3548;
 }
 
-button {
+.form-buttons {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  padding: 0 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
   padding: 10px 20px;
   outline: none;
   border: none;
-  margin: 10px 15px 10px 0;
   border-radius: 3px;
   background: #02295a;
   cursor: pointer;
   color: white;
+  margin-left: auto;
+}
+
+.btn-secondary {
+  padding: 10px 0;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  color: #9699ab;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .form-group-select {
