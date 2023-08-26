@@ -236,8 +236,20 @@ button {
 .form-group-check .form-group-check-container:hover input ~ .checkbox-icon {
   background: #f1f1f1;
 }
-.form-group-check .form-group-checkbox input:checked ~ .checkbox-icon {
-  background: red;
+.form-group-check .form-group-check-container input:checked ~ .checkbox-icon {
+  background: green;
+}
+.form-group-check .checkbox-icon::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+.form-group-check .form-group-check-container input:checked ~ .checkbox-icon::after {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+.form-group-check .form-group-check-container input:checked ~ .checkbox-icon {
+  border: none;
 }
 
 /*# sourceMappingURL=main.css.map */
