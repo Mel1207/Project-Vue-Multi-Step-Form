@@ -275,4 +275,28 @@ button {
   border: 1px solid #02295a;
 }
 
+.message {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.message img {
+  margin: 0 auto 30px auto;
+  display: block;
+}
+.message h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #02295a;
+}
+.message p {
+  text-align: center;
+  line-height: 25px;
+  color: #9699ab;
+  font-size: 16px;
+}
+
 /*# sourceMappingURL=main.css.map */
