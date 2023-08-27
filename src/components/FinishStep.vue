@@ -13,7 +13,7 @@
       <p>$9/mo</p>
     </div>
     <div v-for="item in $store.state.newUser.addOns" :key="item.id" class="service-adds">
-      <p class="service-name">+${{ item.addName }}/mo</p>
+      <p class="service-name">{{ item.addName }}</p>
       <p class="service-price">+${{ item.price }}/mo</p>
     </div>
   </div>
