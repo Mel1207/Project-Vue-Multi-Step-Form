@@ -18,7 +18,24 @@ export default createStore({
       },
       formPlan: 'arcade',
       formBill: false,
-      addOns: ['ao1', 'ao2']
+      addOns: [
+        { 
+          id: 1,
+          addName: 'Online Service',
+          addValue: 'ao1',
+          addCode: 'onlineService',
+          description: 'Access to multiplayer games',
+          price: 1
+        },
+        { 
+          id: 2,
+          addName: 'Larger Storage',
+          addValue: 'ao2',
+          addCode: 'largerStorage',
+          description: 'Access to multiplayer games',
+          price: 2
+        },
+      ]
     },
     isFinished: false,
     isConfirm: false

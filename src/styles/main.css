@@ -336,6 +336,47 @@ body {
   font-size: 16px;
 }
 
+.summary-box {
+  background: #fafbff;
+  border: 1px solid #d6d9e6;
+  padding: 20px;
+  border-radius: 10px;
+}
+.summary-box .bill-state {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d6d9e6;
+  margin-bottom: 20px;
+}
+.summary-box .bill-state a {
+  text-decoration: underline;
+  color: #9699ab;
+  margin-top: 5px;
+  display: block;
+  cursor: pointer;
+}
+.summary-box .service-adds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.summary-box .service-adds .service-name {
+  color: #9699ab;
+}
+.summary-box .service-adds .service-price {
+  color: #02295a;
+  font-weight: 500;
+}
+
+.bill-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
 @media screen and (max-width: 768px) {
   body {
     background: red;

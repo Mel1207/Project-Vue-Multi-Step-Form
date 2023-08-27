@@ -285,3 +285,43 @@ body
     line-height: 25px
     color: $coolGray
     font-size: $fontBody
+
+// SUMMARY BOX 
+.summary-box 
+  background: $alabaster
+  border: 1px solid $lightGray
+  padding: 20px
+  border-radius: 10px
+
+  .bill-state
+    display: flex 
+    justify-content: space-between 
+    align-items: center
+    padding-bottom: 20px
+    border-bottom: 1px solid $lightGray
+    margin-bottom: 20px
+
+    a 
+      text-decoration: underline 
+      color: $coolGray
+      margin-top: 5px
+      display: block
+      cursor: pointer
+
+  .service-adds
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 10px
+
+    .service-name 
+      color: $coolGray
+
+    .service-price 
+      color: $marineBlue
+      font-weight: 500
+
+.bill-total 
+  display: flex
+  justify-content: space-between
+  padding: 20px

@@ -6,7 +6,7 @@
   <form @submit.prevent="validateStep">
     <div v-for="item in addOnsList" :key="item.id" class="form-group-check">
       <label class="form-group-check-container" :for="item.addCode">
-        <input type="checkbox" :id="item.addCode" :value="item.addValue" v-model="addOns">
+        <input type="checkbox" :id="item.addCode" :value="item" v-model="addOns">
         <span class="checkbox-icon"></span>
         <div class="adds-details">
           <div>
@@ -18,6 +18,7 @@
       </label>
     </div>
 
+    <!-- <h3>{{ addOns }}</h3> -->
     <div class="form-buttons">
       <button @click="$store.state.currentStep--" class="btn-secondary">Go back</button>
       <button class="btn-primary">Next Step</button>
@@ -37,7 +38,7 @@
       addValue: 'ao1',
       addCode: 'onlineService',
       description: 'Access to multiplayer games',
-      price: '+$1/mo'
+      price: 1
     },
     { 
       id: 2,
@@ -45,7 +46,7 @@
       addValue: 'ao2',
       addCode: 'largerStorage',
       description: 'Access to multiplayer games',
-      price: '+$1/mo'
+      price: 2
     },
     { 
       id: 3,
@@ -53,7 +54,7 @@
       addValue: 'ao3',
       addCode: 'customizableProfile',
       description: 'Access to multiplayer games',
-      price: '+$1/mo'
+      price: 1
     }
   ]
 
