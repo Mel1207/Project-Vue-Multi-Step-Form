@@ -35,7 +35,8 @@ export default createStore({
           description: 'Access to multiplayer games',
           price: 2
         },
-      ]
+      ], 
+      addOnsSum: []
     },
     isFinished: false,
     isConfirm: false

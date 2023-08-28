@@ -19,8 +19,10 @@
   </div>
   <div class="bill-total">
     <span>Total (Per Month)</span>
-    <p>+12$/mo</p>
+    <p>+${{ total }}/mo</p>
   </div>
+
+  <!-- <h3>{{ $store.state.newUser.addOns }}</h3> -->
   
   <div class="form-buttons">
     <button @click="handleReturn" class="btn-secondary">Go back</button>
@@ -30,6 +32,33 @@
 
 <script setup>
   import store from '@/store';
+  import { computed } from 'vue';
+
+  let totalSum = store.state.newUser.addOns.map(item => item.price)
+  const total = totalSum.reduce((a, b) => {
+    return a + b
+  }, 0)
+  console.log(total)
+
+  // const total = 
+  // const test = [1, 2, 3].reduce((p, a) => p + a, 0)
+  // console.log(test)
+  // const handleTotal = computed({
+  //   get() {
+  //     return store.state.newUser.addOnsSum
+  //   },
+  //   set() {
+  //     return store.state.newUser.addOnsSum
+  //   }
+  // })
+
+
+  // handleTotal()
+
+  // const checkTotal = store.state.newUser.addOns.forEach(i => {
+  //     totalService += i.price
+  //   })
+  
 
   const goStep2 = () => {
     store.state.currentStep = 2
