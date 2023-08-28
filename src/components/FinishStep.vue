@@ -10,7 +10,7 @@
         <p>{{ $store.state.newUser.formPlan }} Monthly</p>
         <a role="button" @click="goStep2">Change</a>
       </div>
-      <p>$9/mo</p>
+      <p> $ {{ $store.state.newUser.formPlan }}/mo</p>
     </div>
     <div v-for="item in $store.state.newUser.addOns" :key="item.id" class="service-adds">
       <p class="service-name">{{ item.addName }}</p>
