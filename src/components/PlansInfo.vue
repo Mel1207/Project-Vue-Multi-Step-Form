@@ -6,15 +6,15 @@
   
   <form @submit.prevent="validateForm">
     <div class="form-group-select">
-      <div class="form-group-radio">
-        <input type="radio" id="arcade" name="promo" class="radio" v-model="formPlan" value="arcade">
-        <label for="arcade" class="radio-ui">
-          <img src="../assets/icon-arcade.svg" alt="arcade">
-          <p>arcade</p>
-          <span>$9/mo</span>
+      <div class="form-group-radio" v-for="item in planList" :key="item.id">
+        <input type="radio" :id="item.inputID" name="promo" class="radio" v-model="formPlan" :value="item">
+        <label :for="item.inputID" class="radio-ui">
+          <img :src="`../assets/${item.planImage}`" :alt="item.planName">
+          <p>{{ item.planName }}</p>
+          <span>${{item.planPrice}}/mo</span>
         </label>
       </div>
-      <div class="form-group-radio">
+      <!-- <div class="form-group-radio">
         <input type="radio" id="advanced" name="promo" class="radio" v-model="formPlan" value="advanced">
         <label for="advanced" class="radio-ui">
           <img src="../assets/icon-advanced.svg" alt="advanced">
@@ -29,7 +29,7 @@
           <p>pro</p>
           <span>$15/mo</span>
         </label>
-      </div>
+      </div> -->
     </div>
 
     <div class="bill-plan">
@@ -55,6 +55,30 @@
 <script setup>
 import { computed } from 'vue';
 import store from '@/store';
+
+  const planList = [
+    {
+      id: 1,
+      planName: 'Arcade',
+      planPrice: 9,
+      planImage: 'icon-arcade.svg',
+      inputID: 'arcade'
+    },
+    {
+      id: 2,
+      planName: 'Advanced',
+      planPrice: 12,
+      planImage: 'icon-advanced.svg',
+      inputID: 'advanced'
+    },
+    {
+      id: 3,
+      planName: 'Pro',
+      planPrice: 15,
+      planImage: 'icon-pro.svg',
+      inputID: 'pro'
+    }
+  ]
 
   const formPlan = computed({
     get() {
