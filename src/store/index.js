@@ -16,7 +16,13 @@ export default createStore({
         phone: '',
         isComplete: false
       },
-      formPlan: 'arcade',
+      formPlan: {
+        id: 1,
+        planName: 'Arcade',
+        planPrice: 9,
+        planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
+        inputID: 'arcade'
+      },
       formBill: false,
       addOns: [
         { 

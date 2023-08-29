@@ -7,10 +7,10 @@
   <div class="summary-box">
     <div class="bill-state">
       <div>
-        <p>{{ $store.state.newUser.formPlan }} Monthly</p>
+        <p>{{ $store.state.newUser.formPlan.planName }} Monthly</p>
         <a role="button" @click="goStep2">Change</a>
       </div>
-      <p> $ {{ $store.state.newUser.formPlan }}/mo</p>
+      <p> $ {{ $store.state.newUser.formPlan.planPrice }}/mo</p>
     </div>
     <div v-for="item in $store.state.newUser.addOns" :key="item.id" class="service-adds">
       <p class="service-name">{{ item.addName }}</p>
@@ -19,7 +19,7 @@
   </div>
   <div class="bill-total">
     <span>Total (Per Month)</span>
-    <p>+${{ total }}/mo</p>
+    <p>+${{ overall }}/mo</p>
   </div>
 
   <!-- <h3>{{ $store.state.newUser.addOns }}</h3> -->
@@ -32,33 +32,17 @@
 
 <script setup>
   import store from '@/store';
-  import { computed } from 'vue';
 
   let totalSum = store.state.newUser.addOns.map(item => item.price)
   const total = totalSum.reduce((a, b) => {
-    return a + b
+    return (a + b)
   }, 0)
-  console.log(total)
 
-  // const total = 
-  // const test = [1, 2, 3].reduce((p, a) => p + a, 0)
-  // console.log(test)
-  // const handleTotal = computed({
-  //   get() {
-  //     return store.state.newUser.addOnsSum
-  //   },
-  //   set() {
-  //     return store.state.newUser.addOnsSum
-  //   }
-  // })
+  const overall = total + store.state.newUser.formPlan.planPrice
 
-
-  // handleTotal()
-
-  // const checkTotal = store.state.newUser.addOns.forEach(i => {
-  //     totalService += i.price
-  //   })
-  
+  // total + store.state.newUser.formPlan.planPrice
+  // console.log(total)
+  // console.log(overall)
 
   const goStep2 = () => {
     store.state.currentStep = 2

@@ -9,38 +9,20 @@
       <div class="form-group-radio" v-for="item in planList" :key="item.id">
         <input type="radio" :id="item.inputID" name="promo" class="radio" v-model="formPlan" :value="item">
         <label :for="item.inputID" class="radio-ui">
-          <img :src="`../assets/${item.planImage}`" :alt="item.planName">
+          <img :src="item.planImage" :alt="item.planName">
           <p>{{ item.planName }}</p>
           <span>${{item.planPrice}}/mo</span>
         </label>
       </div>
-      <!-- <div class="form-group-radio">
-        <input type="radio" id="advanced" name="promo" class="radio" v-model="formPlan" value="advanced">
-        <label for="advanced" class="radio-ui">
-          <img src="../assets/icon-advanced.svg" alt="advanced">
-          <p>advanced</p>
-          <span>$12/mo</span>
-        </label>
-      </div>
-      <div class="form-group-radio">
-        <input type="radio" id="pro" name="promo" class="radio" v-model="formPlan" value="pro">
-        <label for="pro" class="radio-ui">
-          <img src="../assets/icon-pro.svg" alt="pro">
-          <p>pro</p>
-          <span>$15/mo</span>
-        </label>
-      </div> -->
     </div>
 
     <div class="bill-plan">
-      
       <label class="form-group-checkbox">
         <p>Montly</p>
         <input type="checkbox" class="check" v-model="formBill">
         <span class="checkbox"></span>
         <p>Annual</p>
       </label>
-      
     </div>
 
     <div class="form-buttons"> 
@@ -61,7 +43,7 @@ import store from '@/store';
       id: 1,
       planName: 'Arcade',
       planPrice: 9,
-      planImage: 'icon-arcade.svg',
+      planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
       inputID: 'arcade'
     },
     {
