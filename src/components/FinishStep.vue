@@ -17,7 +17,7 @@
       <p class="service-price">+${{ item.price }}/mo</p>
     </div>
   </div>
-  <div class="bill-total">
+  <div class="bill-total" v-if="!$store.state.newUser.formBill">
     <span>Total (Per Month)</span>
     <p>+${{ overall }}/mo</p>
   </div>
