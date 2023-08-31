@@ -11,7 +11,8 @@
         <label :for="item.inputID" class="radio-ui">
           <img :src="item.planImage" :alt="item.planName">
           <p>{{ item.planName }}</p>
-          <span>${{item.planPrice}}/mo</span>
+          <span v-if="!$store.state.newUser.formBill">${{item.planPrice}}/mo</span>
+          <span v-if="$store.state.newUser.formBill">${{ item.planPrice * (12 - 2) }}/yr</span>
         </label>
       </div>
     </div>
