@@ -58,6 +58,7 @@
   const handleMessage = () => {
     store.state.isConfirm = true
     store.state.isFinished = false
+    console.log(store.state.newUser)
   }
 
 </script>
