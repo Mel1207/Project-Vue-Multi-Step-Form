@@ -41,10 +41,6 @@
 
   const overall = total + store.state.newUser.formPlan.planPrice
 
-  // total + store.state.newUser.formPlan.planPrice
-  // console.log(total)
-  // console.log(overall)
-
   const goStep2 = () => {
     store.state.currentStep = 2
     store.state.isFinished = false

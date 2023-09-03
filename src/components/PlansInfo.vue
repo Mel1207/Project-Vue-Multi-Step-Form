@@ -36,10 +36,10 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import store from '@/store';
 
-  const planList = [
+  const planList = ref([
     {
       id: 1,
       planName: 'Arcade',
@@ -54,32 +54,23 @@ import store from '@/store';
       id: 2,
       planName: 'Advanced',
       planPrice: {
-        monthly: 12, 
+        monthly: 12,
         yearly: 12 * (12 - 2)
       },
-      planImage: 'icon-advanced.svg',
+      planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
       inputID: 'advanced'
     },
     {
       id: 3,
       planName: 'Pro',
       planPrice: {
-        monthly: 15,
-        yearly: 15 * (12 -2)
+        monthly: 12,
+        yearly: 12 * (12 - 2)
       },
-      planImage: 'icon-pro.svg',
+      planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
       inputID: 'pro'
     }
-  ]
-
-  const formPlan = computed({
-    get() {
-      return store.state.newUser.formPlan
-    },
-    set(newPlan) {
-      return store.commit('setPlan', newPlan)
-    }
-  })
+  ])
 
   const formBill = computed({
     get() {
@@ -87,6 +78,16 @@ import store from '@/store';
     },
     set(newFormBill) {
       return store.commit('setFormBill', newFormBill)
+    }
+  })
+
+
+  const formPlan = computed({
+    get() {
+      return store.state.newUser.formPlan
+    },
+    set(newPlan) {
+      return store.commit('setPlan', newPlan)
     }
   })
 
