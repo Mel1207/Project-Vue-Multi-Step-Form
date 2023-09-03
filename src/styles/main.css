@@ -279,8 +279,8 @@ h1 {
   position: relative;
   cursor: pointer;
   margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 15px 20px;
+  border-radius: 7px;
   border: 1px solid transparent;
   background: #fafbff;
   border: 1px solid #bfe2fd;
@@ -296,6 +296,17 @@ h1 {
 }
 .form-group-check .form-group-check-container .adds-details p {
   font-weight: bold;
+  color: #02295a;
+  margin-bottom: 3px;
+}
+.form-group-check .form-group-check-container .adds-details span {
+  color: #9699ab;
+  font-size: 14px;
+}
+.form-group-check .form-group-check-container .adds-details .add-price {
+  font-weight: 400;
+  font-size: 14px;
+  color: #473dff;
 }
 .form-group-check .form-group-check-container input {
   position: absolute;
@@ -347,7 +358,7 @@ h1 {
 
 .form-group-check:has(input:checked) {
   background: #fafbff;
-  border: 1px solid #02295a;
+  border: 1px solid #473dff;
 }
 
 .message {

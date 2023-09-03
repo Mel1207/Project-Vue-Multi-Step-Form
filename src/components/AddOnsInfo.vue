@@ -13,8 +13,8 @@
             <p>{{ item.addName }}</p>
             <span>{{ item.description }}</span>
           </div>
-          <p v-if="!$store.state.newUser.formBill">+${{ item.planPrice.monthly }}/mo</p>
-          <p v-if="$store.state.newUser.formBill">+{{ item.planPrice.yearly }}/yr</p>
+          <p v-if="!$store.state.newUser.formBill" class="add-price">+${{ item.planPrice.monthly }}/mo</p>
+          <p v-if="$store.state.newUser.formBill" class="add-price">+{{ item.planPrice.yearly }}/yr</p>
         </div>
       </label>
     </div>
