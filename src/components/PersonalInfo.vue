@@ -27,7 +27,7 @@
       <input type="number" id="phone" v-model="phone" @keydown="isTyping" :class="$store.state.newUser.formPhone.isComplete ? 'required' : ''" placeholder="e.g +1234 567 890">
     </div>
     <div class="form-buttons">
-      <button class="btn-primary">Next Step</button>
+      <button class="btn btn-primary">Next Step</button>
     </div>
   </form>
 </template>

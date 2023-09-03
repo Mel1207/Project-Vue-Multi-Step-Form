@@ -22,7 +22,7 @@
     <!-- <h3>{{ addOns }}</h3> -->
     <div class="form-buttons">
       <button @click="$store.state.currentStep--" class="btn-secondary">Go back</button>
-      <button class="btn-primary">Next Step</button>
+      <button class="btn btn-primary">Next Step</button>
     </div>
     
   </form>

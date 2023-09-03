@@ -7,11 +7,14 @@
   <div class="summary-box">
     <div class="bill-state">
       <div>
-        <p>{{ $store.state.newUser.formPlan.planName }} Monthly</p>
+        <p class="bill">{{ $store.state.newUser.formPlan.planName }}
+          <span v-if="!$store.state.newUser.formBill">(Monthly)</span>
+          <span v-if="$store.state.newUser.formBill">(Yearly)</span>
+        </p>
         <a role="button" @click="goStep2">Change</a>
       </div>
-      <p v-if="!$store.state.newUser.formBill"> ${{ $store.state.newUser.formPlan.planPrice.monthly }}/mo</p>
-      <p v-if="$store.state.newUser.formBill"> ${{ $store.state.newUser.formPlan.planPrice.yearly }}/yr</p>
+      <p v-if="!$store.state.newUser.formBill" class="bill-price"> ${{ $store.state.newUser.formPlan.planPrice.monthly }}/mo</p>
+      <p v-if="$store.state.newUser.formBill" class="bill-price"> ${{ $store.state.newUser.formPlan.planPrice.yearly }}/yr</p>
     </div>
     <div v-for="item in $store.state.newUser.addOns" :key="item.id" class="service-adds">
       <p class="service-name">{{ item.addName }}</p>
@@ -28,7 +31,7 @@
   
   <div class="form-buttons">
     <button @click="handleReturn" class="btn-secondary">Go back</button>
-    <button @click="handleMessage" class="btn-primary">Confirm</button>
+    <button @click="handleMessage" class="btn btn-primary-light">Confirm</button>
   </div>
 </template>
 

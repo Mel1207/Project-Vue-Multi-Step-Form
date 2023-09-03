@@ -32,7 +32,7 @@
 
     <div class="form-buttons"> 
       <button @click.self="goBack" type="button" class="btn-secondary">Go Back</button>
-      <button class="btn-primary">Next Step</button>
+      <button class="btn btn-primary">Next Step</button>
     </div>
   </form>
   
@@ -68,8 +68,8 @@ import store from '@/store';
       id: 3,
       planName: 'Pro',
       planPrice: {
-        monthly: 12,
-        yearly: 12 * (12 - 2)
+        monthly: 15,
+        yearly: 15 * (12 - 2)
       },
       planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
       inputID: 'pro'
