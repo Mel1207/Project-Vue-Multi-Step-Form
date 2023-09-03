@@ -10,9 +10,13 @@
         <input type="radio" :id="item.inputID" name="promo" class="radio" v-model="formPlan" :value="item">
         <label :for="item.inputID" class="radio-ui">
           <img :src="item.planImage" :alt="item.planName">
-          <p>{{ item.planName }}</p>
-          <span v-if="!$store.state.newUser.formBill">${{item.planPrice.monthly}}/mo</span>
-          <span v-if="$store.state.newUser.formBill">${{ item.planPrice.yearly }}/yr</span>
+
+          <div>
+            <p>{{ item.planName }}</p>
+            <span v-if="!$store.state.newUser.formBill">${{item.planPrice.monthly}}/mo</span>
+            <span v-if="$store.state.newUser.formBill">${{ item.planPrice.yearly }}/yr</span>
+            <span v-if="$store.state.newUser.formBill" class="span-promo">2 months free</span>
+          </div>
         </label>
       </div>
     </div>
