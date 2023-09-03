@@ -13,7 +13,8 @@
             <p>{{ item.addName }}</p>
             <span>{{ item.description }}</span>
           </div>
-          <p>{{ item.price }}</p>
+          <p v-if="!$store.state.newUser.formBill">{{ item.planPrice.monthly }}</p>
+          <p v-if="$store.state.newUser.formBill">{{ item.planPrice.yearly }}</p>
         </div>
       </label>
     </div>
@@ -38,7 +39,10 @@
       addValue: 'ao1',
       addCode: 'onlineService',
       description: 'Access to multiplayer games',
-      price: 1
+      planPrice: {
+        monthly: 1,
+        yearly: 1 * (12 - 2)
+      },
     },
     { 
       id: 2,
@@ -46,7 +50,10 @@
       addValue: 'ao2',
       addCode: 'largerStorage',
       description: 'Access to multiplayer games',
-      price: 2
+      planPrice: {
+        monthly: 2,
+        yearly: 2 * (12 - 2)
+      },
     },
     { 
       id: 3,
@@ -54,7 +61,10 @@
       addValue: 'ao3',
       addCode: 'customizableProfile',
       description: 'Access to multiplayer games',
-      price: 1
+      planPrice: {
+        monthly: 2,
+        yearly: 2 * (12 - 2)
+      },
     }
   ]
 

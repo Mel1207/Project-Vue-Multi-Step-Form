@@ -34,7 +34,10 @@ export default createStore({
           addValue: 'ao1',
           addCode: 'onlineService',
           description: 'Access to multiplayer games',
-          price: 1
+          planPrice: {
+            monthly: 1,
+            yearly: 1 * (12 - 2)
+          },
         },
         { 
           id: 2,
@@ -42,7 +45,10 @@ export default createStore({
           addValue: 'ao2',
           addCode: 'largerStorage',
           description: 'Access to multiplayer games',
-          price: 2
+          planPrice: {
+            monthly: 2,
+            yearly: 2 * (12 - 2)
+          },
         },
       ], 
       addOnsSum: []
