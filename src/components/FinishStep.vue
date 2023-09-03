@@ -25,8 +25,6 @@
     <p v-if="!$store.state.newUser.formBill">+${{ overallMonth }}/mo</p>
     <p v-if="$store.state.newUser.formBill">+${{ overallYear }}/yr</p>
   </div>
-
-  <!-- <h3>{{ $store.state.newUser.addOns }}</h3> -->
   
   <div class="form-buttons">
     <button @click="handleReturn" class="btn-secondary">Go back</button>
