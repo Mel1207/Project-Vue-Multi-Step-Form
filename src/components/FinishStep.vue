@@ -22,7 +22,8 @@
   <div class="bill-total">
     <span v-if="!$store.state.newUser.formBill">Total (Per Month)</span>
     <span v-if="$store.state.newUser.formBill">Total (Per Year)</span>
-    <p>+${{ overall }}/mo</p>
+    <p v-if="!$store.state.newUser.formBill">+${{ overallMonth }}/mo</p>
+    <p v-if="$store.state.newUser.formBill">+${{ overallYear }}/yr</p>
   </div>
 
   <!-- <h3>{{ $store.state.newUser.addOns }}</h3> -->
@@ -36,12 +37,18 @@
 <script setup>
   import store from '@/store';
 
-  let totalSum = store.state.newUser.addOns.map(item => item.price)
-  const total = totalSum.reduce((a, b) => {
+  let totalSumMonth = store.state.newUser.addOns.map(item => item.planPrice.monthly)
+  let totalSumYear = store.state.newUser.addOns.map(item => item.planPrice.yearly)
+
+  const totalMonth = totalSumMonth.reduce((a, b) => {
     return (a + b)
   }, 0)
+  const totalYear = totalSumYear.reduce((a, b) => {
+    return (a + b)
+  })
 
-  const overall = total + store.state.newUser.formPlan.planPrice
+  const overallMonth = totalMonth + store.state.newUser.formPlan.planPrice.monthly
+  const overallYear = totalYear + store.state.newUser.formPlan.planPrice.yearly
 
   const goStep2 = () => {
     store.state.currentStep = 2
