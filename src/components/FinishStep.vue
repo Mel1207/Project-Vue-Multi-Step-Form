@@ -10,11 +10,13 @@
         <p>{{ $store.state.newUser.formPlan.planName }} Monthly</p>
         <a role="button" @click="goStep2">Change</a>
       </div>
-      <p> $ {{ $store.state.newUser.formPlan.planPrice }}/mo</p>
+      <p v-if="!$store.state.newUser.formBill"> ${{ $store.state.newUser.formPlan.planPrice.monthly }}/mo</p>
+      <p v-if="$store.state.newUser.formBill"> ${{ $store.state.newUser.formPlan.planPrice.yearly }}/yr</p>
     </div>
     <div v-for="item in $store.state.newUser.addOns" :key="item.id" class="service-adds">
       <p class="service-name">{{ item.addName }}</p>
-      <p class="service-price">+${{ item.price }}/mo</p>
+      <p v-if="!$store.state.newUser.formBill" class="service-price">+${{ item.planPrice.monthly }}/mo</p>
+      <p v-if="$store.state.newUser.formBill" class="service-price">+${{ item.planPrice.yearly }}/yr</p>
     </div>
   </div>
   <div class="bill-total">
