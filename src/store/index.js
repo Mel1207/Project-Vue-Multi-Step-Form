@@ -22,8 +22,8 @@ export default createStore({
         planPrice: {
           monthly: 9,
           yearly: 9 * (12 - 2)
-        },      
-        planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
+        },
+        planImage: '../assets/icon-arcade.svg',
         inputID: 'arcade'
       },
       formBill: false,

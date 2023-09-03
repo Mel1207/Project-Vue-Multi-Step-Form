@@ -1,6 +1,6 @@
 <template>
   <div class="step-description">
-    <h1>Personal Info</h1>
+    <h1>Personal info</h1>
     <p>Please provide your name, email and phone number.</p>
   </div>
 
@@ -10,21 +10,21 @@
         <label for="name">Name</label>
         <span v-if="$store.state.newUser.formName.isComplete">This field is required</span>
       </div>
-      <input type="text" id="name" v-model="name" @keydown="isTyping" :class="$store.state.newUser.formName.isComplete ? 'required' : ''">
+      <input type="text" id="name" v-model="name" @keydown="isTyping" :class="$store.state.newUser.formName.isComplete ? 'required' : ''" placeholder="Ex. John">
     </div>
     <div class="form-group">
       <div>
         <label for="email">Email</label>
         <span v-if="$store.state.newUser.formEmail.isComplete">This field is required</span>
       </div>
-      <input type="email" id="email" v-model="email" @keydown="isTyping" :class="$store.state.newUser.formEmail.isComplete ? 'required' : ''">
+      <input type="email" id="email" v-model="email" @keydown="isTyping" :class="$store.state.newUser.formEmail.isComplete ? 'required' : ''" placeholder="Ex. john@email.com">
     </div>
     <div class="form-group">
       <div>
         <label for="phone">Phone</label>
         <span v-if="$store.state.newUser.formPhone.isComplete">This field is required</span>
       </div>
-      <input type="number" id="phone" v-model="phone" @keydown="isTyping" :class="$store.state.newUser.formPhone.isComplete ? 'required' : ''">
+      <input type="number" id="phone" v-model="phone" @keydown="isTyping" :class="$store.state.newUser.formPhone.isComplete ? 'required' : ''" placeholder="e.g +1234 567 890">
     </div>
     <div class="form-buttons">
       <button class="btn-primary">Next Step</button>
