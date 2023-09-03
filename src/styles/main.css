@@ -148,7 +148,7 @@ h1 {
   border: none;
   border-radius: 7px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 10px 15px;
   color: #02295a;
   font-weight: 600;
 }
@@ -269,9 +269,9 @@ h1 {
   background: red;
   padding: 12px 0;
   background: #fafbff;
-  border: 1px solid #eff1ff82;
   border-radius: 7px;
-  box-shadow: 0px 4px 12px 1px #eff1ff;
+  border: 1px solid #eff1ff82;
+  box-shadow: 0px 2px 2px 1px #eff1ff85;
 }
 
 .form-group-check {
@@ -387,9 +387,10 @@ h1 {
 
 .summary-box {
   background: #fafbff;
-  border: 1px solid #d6d9e6;
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid #eff1ff82;
+  box-shadow: 0px 2px 2px 1px #eff1ff85;
 }
 .summary-box .bill-state {
   display: flex;
