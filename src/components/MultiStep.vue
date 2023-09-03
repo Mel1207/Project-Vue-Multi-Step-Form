@@ -31,12 +31,12 @@ const steps = [
   { 
     stepNumber: 2, 
     stepTitle: 'Step 2',
-    stepDetail: 'Your Prize'
+    stepDetail: 'Select Plan'
   },
   { 
     stepNumber: 3, 
     stepTitle: 'Step 3',
-    stepDetail: 'Your Info'
+    stepDetail: 'Add-ons'
   },
   { 
     stepNumber: 4, 
