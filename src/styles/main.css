@@ -457,6 +457,21 @@ h1 {
   color: #473dff;
 }
 
+.steps-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: red;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: -1;
+}
+
 @media screen and (max-width: 860px) {
   #app {
     width: 100%;
@@ -483,7 +498,8 @@ h1 {
   }
 
   .card {
-    margin-top: 15px;
+    transform: translateY(100px);
+    top: 100px;
     display: unset;
     height: auto;
   }
@@ -497,7 +513,7 @@ h1 {
     width: 100vw;
     left: 50%;
     transform: translateX(-50%);
-    top: calc( 100vh - 105px );
+    top: calc( 100vh - 190px );
     padding: 0 15px;
   }
 }
