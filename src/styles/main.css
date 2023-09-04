@@ -59,11 +59,16 @@
 
 body {
   background: #EEF5FF;
+  font-family: "Ubuntu", sans-serif;
+  padding: 0 15px;
+}
+
+#app {
+  height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  font-family: "Ubuntu", sans-serif;
 }
 
 h1 {
@@ -452,9 +457,48 @@ h1 {
   color: #473dff;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    background: red;
+@media screen and (max-width: 860px) {
+  #app {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .card .form-group-select {
+    gap: 15px;
+  }
+  .card .steps-container {
+    display: none;
+  }
+  .card .step-form-details {
+    width: 520px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #app {
+    align-items: start;
+  }
+
+  .card {
+    margin-top: 15px;
+    display: unset;
+    height: auto;
+  }
+  .card .step-form-details {
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .card .form-buttons {
+    background: #ffffff;
+    height: 80px;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc( 100vh - 105px );
+    padding: 0 15px;
   }
 }
 

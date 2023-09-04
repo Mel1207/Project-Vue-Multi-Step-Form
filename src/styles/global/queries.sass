@@ -1,3 +1,46 @@
+@media screen and (max-width: 860px)
+  #app 
+    width: 100%
+  .card
+    width: 100%
+    grid-template-columns: 1fr
+
+    .form-group-select
+      gap: 15px
+
+    .steps-container
+      display: none
+
+    .step-form-details 
+      width: 520px 
+      margin: 0 auto
+
+  // .form-buttons
+  //   background: red 
+  //   height: 80px
+  //   width: 100%
+  //   top: calc( 100vh - 80px )
+
+
 @media screen and (max-width: 768px) 
-  body 
-    background: red
+
+@media screen and (max-width: 600px)
+  #app 
+    align-items: start 
+  .card 
+    margin-top: 15px
+    display: unset
+    height: auto
+
+    .step-form-details
+      width: 100%
+      padding: 10px 10px
+
+    .form-buttons 
+      background: $cWhite
+      height: 80px
+      width: 100vw 
+      left: 50%
+      transform: translateX(-50%)
+      top: calc( 100vh - 105px )
+      padding: 0 15px
