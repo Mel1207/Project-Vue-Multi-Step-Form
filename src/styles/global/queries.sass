@@ -8,9 +8,18 @@
   .card
     width: 100%
     grid-template-columns: 1fr
-
+  
     .form-group-select
       gap: 15px
+      flex-direction: column
+
+      .form-group-radio
+        .radio-ui 
+          height: auto
+          flex-direction: row
+          justify-content: initial
+          width: 100%
+          gap: 20px
 
     .steps-container
       display: none
@@ -19,12 +28,6 @@
       width: 520px 
       margin: 0 auto
 
-  // .form-buttons
-  //   background: red 
-  //   height: 80px
-  //   width: 100%
-  //   top: calc( 100vh - 80px )
-
 
 @media screen and (max-width: 768px) 
 
@@ -32,12 +35,10 @@
   #app 
     align-items: start 
   .card 
-    // margin-top: 15px
     transform: translateY(100px)
     top: 100px
     display: unset
     height: auto
-   
 
     .step-form-details
       width: 100%
@@ -51,3 +52,6 @@
       transform: translateX(-50%)
       top: calc( 100vh - 190px )
       padding: 0 15px
+
+  .message 
+    padding: 50px 0

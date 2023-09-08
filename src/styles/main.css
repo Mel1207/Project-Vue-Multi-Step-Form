@@ -51,6 +51,63 @@
   color: #02295a;
 }
 
+.dot {
+  height: 38px;
+  width: 38px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dot-active {
+  background: #bfe2fd;
+  color: black;
+  border: 1px solid #bfe2fd;
+}
+
+.dot-details span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+}
+.dot-details p {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.steps-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: url("../assets/bg-sidebar-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 230px;
+  z-index: -1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.steps-mobile .steps-mobile-container {
+  transform: translateY(-60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.steps-mobile .steps .dot-details {
+  display: none;
+}
+
 *, html {
   margin: 0;
   padding: 0;
@@ -100,34 +157,6 @@ h1 {
   padding: 30px;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.card .dot {
-  height: 38px;
-  width: 38px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: bold;
-}
-.card .dot-active {
-  background: #bfe2fd;
-  color: black;
-  border: 1px solid #bfe2fd;
-}
-.card .dot-details span {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 16px;
-}
-.card .dot-details p {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 16px;
-  margin-top: 5px;
-  text-transform: uppercase;
 }
 .card .step-form-details {
   padding: 10px 50px;
@@ -457,23 +486,6 @@ h1 {
   color: #473dff;
 }
 
-.steps-mobile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background: url("../assets/bg-sidebar-mobile.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 230px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  z-index: -1;
-}
-
 @media screen and (max-width: 860px) {
   #app {
     width: 100%;
@@ -489,6 +501,14 @@ h1 {
   }
   .card .form-group-select {
     gap: 15px;
+    flex-direction: column;
+  }
+  .card .form-group-select .form-group-radio .radio-ui {
+    height: auto;
+    flex-direction: row;
+    justify-content: initial;
+    width: 100%;
+    gap: 20px;
   }
   .card .steps-container {
     display: none;
@@ -521,6 +541,10 @@ h1 {
     transform: translateX(-50%);
     top: calc( 100vh - 190px );
     padding: 0 15px;
+  }
+
+  .message {
+    padding: 50px 0;
   }
 }
 

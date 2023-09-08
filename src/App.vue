@@ -1,6 +1,9 @@
 <template>
   <div class="steps-mobile">
-    <Step v-for="step in steps" :key="step.id" :stepProp="step"/>
+    <div class="steps-mobile-container">
+      <Step v-for="step in steps" :key="step.id" :stepProp="step"/>
+    </div>
+    
   </div>
   <MultiStep />
 </template>
