@@ -51,7 +51,7 @@ import store from '@/store';
         monthly: 9,
         yearly: 9 * (12 - 2)
       },
-      planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
+      planImage: 'https://tfi-bucket-storage.vercel.app/assets/icon-arcade.svg',
       inputID: 'arcade'
     },
     {
@@ -61,7 +61,7 @@ import store from '@/store';
         monthly: 12,
         yearly: 12 * (12 - 2)
       },
-      planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
+      planImage: 'https://tfi-bucket-storage.vercel.app/assets/icon-advanced.svg',
       inputID: 'advanced'
     },
     {
@@ -71,7 +71,7 @@ import store from '@/store';
         monthly: 15,
         yearly: 15 * (12 - 2)
       },
-      planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
+      planImage: 'https://tfi-bucket-storage.vercel.app/assets/icon-pro.svg',
       inputID: 'pro'
     }
   ])

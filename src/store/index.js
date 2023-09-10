@@ -23,7 +23,7 @@ export default createStore({
           monthly: 9,
           yearly: 9 * (12 - 2)
         },
-        planImage: 'https://project-travel-buds-ui.vercel.app/img/icon-facebook.svg',
+        planImage: 'https://tfi-bucket-storage.vercel.app/assets/icon-arcade.svg',
         inputID: 'arcade'
       },
       formBill: false,
