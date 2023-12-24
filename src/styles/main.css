@@ -27,11 +27,11 @@
 }
 
 .btn-primary-light {
-  background: #473dff;
+  background: #473DFF;
 }
 
 .btn-primary {
-  background: #02295a;
+  background: #02295A;
   margin-left: auto;
 }
 
@@ -39,7 +39,7 @@
   padding: 10px 0;
   font-weight: bold;
   font-family: "Ubuntu", sans-serif;
-  color: #9699ab;
+  color: #9699AB;
   outline: none;
   background: none;
   border: none;
@@ -48,7 +48,7 @@
   transition: all 0.3s ease;
 }
 .btn-secondary:hover {
-  color: #02295a;
+  color: #02295A;
 }
 
 .dot {
@@ -65,9 +65,9 @@
 }
 
 .dot-active {
-  background: #bfe2fd;
+  background: #BFE2FD;
   color: black;
-  border: 1px solid #bfe2fd;
+  border: 1px solid #BFE2FD;
 }
 
 .dot-details span {
@@ -115,7 +115,7 @@
 }
 
 body {
-  background: #EEF5FF;
+  background: #F0F6FF;
   font-family: "Ubuntu", sans-serif;
   padding: 0 15px;
 }
@@ -130,7 +130,7 @@ body {
 
 h1 {
   font-size: 30px;
-  color: #02295a;
+  color: #02295A;
   font-weight: bold !important;
 }
 
@@ -170,7 +170,7 @@ h1 {
 }
 .card .step-form-details .step-description p {
   margin-bottom: 30px;
-  color: #9699ab;
+  color: #9699AB;
   font-size: 16px;
 }
 
@@ -180,7 +180,7 @@ h1 {
   margin-bottom: 20px;
 }
 .form-group .required {
-  border: 1px solid #ed3548;
+  border: 1px solid #ED3548;
 }
 .form-group input {
   width: 100%;
@@ -190,11 +190,11 @@ h1 {
   border-radius: 7px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
-  color: #02295a;
+  color: #02295A;
   font-weight: 600;
 }
 .form-group input:focus {
-  border: 1px solid #02295a;
+  border: 1px solid #02295A;
 }
 .form-group div {
   display: flex;
@@ -203,12 +203,12 @@ h1 {
 .form-group div label {
   font-weight: 500;
   margin-bottom: 5px;
-  color: #02295a;
+  color: #02295A;
 }
 .form-group div span {
   font-size: 14px;
   font-weight: bold;
-  color: #ed3548;
+  color: #ED3548;
 }
 
 .form-group-select {
@@ -233,7 +233,7 @@ h1 {
 .form-group-select .form-group-radio .radio-ui {
   height: 150px;
   width: 130px;
-  border: 1px solid #d6d9e6;
+  border: 1px solid #D6D9E6;
   display: block;
   padding: 12px;
   border-radius: 8px;
@@ -247,22 +247,22 @@ h1 {
 }
 .form-group-select .form-group-radio .radio-ui p {
   font-weight: bold;
-  color: #02295a;
+  color: #02295A;
   margin-bottom: 3px;
 }
 .form-group-select .form-group-radio .radio-ui span {
-  color: #9699ab;
+  color: #9699AB;
   font-size: 14px;
 }
 .form-group-select .form-group-radio .radio-ui .span-promo {
   margin-top: 3px;
   display: block;
-  color: #02295a;
+  color: #02295A;
   font-size: 12px;
 }
 .form-group-select .form-group-radio .radio:checked + .radio-ui, .form-group-select .form-group-radio .radio:hover + .radio-ui {
-  border: 1px solid #473dff;
-  background: #fafbff;
+  border: 1px solid #473DFF;
+  background: #CCCCCC;
 }
 
 .form-group-checkbox {
@@ -274,7 +274,7 @@ h1 {
   position: relative;
   height: 20px;
   width: 35px;
-  background: #02295a;
+  background: #02295A;
   display: block;
   border-radius: 20px;
 }
@@ -309,7 +309,7 @@ h1 {
   gap: 15px;
   background: red;
   padding: 12px 0;
-  background: #fafbff;
+  background: #CCCCCC;
   border-radius: 7px;
   border: 1px solid #eff1ff82;
   box-shadow: 0px 2px 2px 1px #eff1ff85;
@@ -323,8 +323,8 @@ h1 {
   padding: 15px 20px;
   border-radius: 7px;
   border: 1px solid transparent;
-  background: #fafbff;
-  border: 1px solid #bfe2fd;
+  background: #CCCCCC;
+  border: 1px solid #BFE2FD;
 }
 .form-group-check .form-group-check-container {
   cursor: pointer;
@@ -337,17 +337,17 @@ h1 {
 }
 .form-group-check .form-group-check-container .adds-details p {
   font-weight: bold;
-  color: #02295a;
+  color: #02295A;
   margin-bottom: 3px;
 }
 .form-group-check .form-group-check-container .adds-details span {
-  color: #9699ab;
+  color: #9699AB;
   font-size: 14px;
 }
 .form-group-check .form-group-check-container .adds-details .add-price {
   font-weight: 400;
   font-size: 14px;
-  color: #473dff;
+  color: #473DFF;
 }
 .form-group-check .form-group-check-container input {
   position: absolute;
@@ -382,7 +382,7 @@ h1 {
   background: #f1f1f1;
 }
 .form-group-check .form-group-check-container input:checked ~ .checkbox-icon {
-  background: #473dff;
+  background: #473DFF;
 }
 .form-group-check .checkbox-icon::after {
   content: "";
@@ -398,8 +398,8 @@ h1 {
 }
 
 .form-group-check:has(input:checked) {
-  background: #fafbff;
-  border: 1px solid #473dff;
+  background: #CCCCCC;
+  border: 1px solid #473DFF;
 }
 
 .message {
@@ -417,17 +417,17 @@ h1 {
 .message h1 {
   text-align: center;
   margin-bottom: 15px;
-  color: #02295a;
+  color: #02295A;
 }
 .message p {
   text-align: center;
   line-height: 25px;
-  color: #9699ab;
+  color: #9699AB;
   font-size: 16px;
 }
 
 .summary-box {
-  background: #fafbff;
+  background: #CCCCCC;
   padding: 20px;
   border-radius: 10px;
   border: 1px solid #eff1ff82;
@@ -438,12 +438,12 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #d6d9e6;
+  border-bottom: 1px solid #D6D9E6;
   margin-bottom: 20px;
 }
 .summary-box .bill-state a {
   text-decoration: underline;
-  color: #9699ab;
+  color: #9699AB;
   margin-top: 5px;
   display: block;
   cursor: pointer;
@@ -451,11 +451,11 @@ h1 {
 }
 .summary-box .bill-state .bill {
   font-weight: 500;
-  color: #02295a;
+  color: #02295A;
 }
 .summary-box .bill-state .bill-price {
   font-weight: bold;
-  color: #02295a;
+  color: #02295A;
 }
 .summary-box .service-adds {
   display: flex;
@@ -464,10 +464,10 @@ h1 {
   margin-bottom: 10px;
 }
 .summary-box .service-adds .service-name {
-  color: #9699ab;
+  color: #9699AB;
 }
 .summary-box .service-adds .service-price {
-  color: #02295a;
+  color: #02295A;
   font-weight: 500;
 }
 
@@ -478,12 +478,12 @@ h1 {
 }
 .bill-total span {
   font-size: 14px;
-  color: #9699ab;
+  color: #9699AB;
 }
 .bill-total p {
   font-size: 18px;
   font-weight: bold;
-  color: #473dff;
+  color: #473DFF;
 }
 
 @media screen and (max-width: 860px) {

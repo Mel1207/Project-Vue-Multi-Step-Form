@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import Steps from './Steps.vue'
+import Steps from './Steps/Steps.vue'
 import PersonalInfo from './PersonalInfo.vue'
 import PlansInfo from './PlansInfo.vue'
 import AddOnsInfo from './AddOnsInfo.vue'

@@ -3,13 +3,12 @@
     <div class="steps-mobile-container">
       <Step v-for="step in steps" :key="step.id" :stepProp="step"/>
     </div>
-    
   </div>
   <MultiStep />
 </template>
 
 <script setup>
-import Step from './components/Steps.vue'
+import Step from './components/Steps/Steps.vue'
 import MultiStep from './components/MultiStep.vue'
 
 const steps = [
@@ -34,5 +33,4 @@ const steps = [
     stepDetail: 'Summary'
   }
 ]
-
 </script>
