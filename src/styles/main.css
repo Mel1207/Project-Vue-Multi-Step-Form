@@ -262,7 +262,7 @@ h1 {
 }
 .form-group-select .form-group-radio .radio:checked + .radio-ui, .form-group-select .form-group-radio .radio:hover + .radio-ui {
   border: 1px solid #473DFF;
-  background: #CCCCCC;
+  background: #F0F6FF;
 }
 
 .form-group-checkbox {
@@ -309,7 +309,7 @@ h1 {
   gap: 15px;
   background: red;
   padding: 12px 0;
-  background: #CCCCCC;
+  background: #F0F6FF;
   border-radius: 7px;
   border: 1px solid #eff1ff82;
   box-shadow: 0px 2px 2px 1px #eff1ff85;
@@ -323,7 +323,7 @@ h1 {
   padding: 15px 20px;
   border-radius: 7px;
   border: 1px solid transparent;
-  background: #CCCCCC;
+  background: #ffffff;
   border: 1px solid #BFE2FD;
 }
 .form-group-check .form-group-check-container {
@@ -398,7 +398,7 @@ h1 {
 }
 
 .form-group-check:has(input:checked) {
-  background: #CCCCCC;
+  background: #F0F6FF;
   border: 1px solid #473DFF;
 }
 
@@ -427,7 +427,7 @@ h1 {
 }
 
 .summary-box {
-  background: #CCCCCC;
+  background: #F0F6FF;
   padding: 20px;
   border-radius: 10px;
   border: 1px solid #eff1ff82;
